@@ -6,7 +6,7 @@ void main(List<String> args) async {
   final response = await http.get(url);
   dom.Document html = dom.Document.html(response.body);
 
-  // Extraindo o titulo da página
+  // Extraindo o titulo do produto
   final titles = html
       .querySelectorAll('h2 > a > span')
       .map((e) => e.innerHtml.trim())
